@@ -1,0 +1,38 @@
+﻿@model BarCodeApplication.ViewModels.Scan
+
+@{
+    ViewBag.Title = "Scan barcode";
+    
+}
+
+<hr />
+
+<fieldset>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-2">
+            <h4>scan the barcode</h4>
+        </div>
+        @using (Html.BeginForm())
+        {
+
+            <div class="col-md-4">
+                <p>
+                <div class="editor-field focus">
+
+
+                    @Html.TextBoxFor(model => model.BarCode, new {@id = "txtBarCode", autofocus = "autofocus", onfocus = "clearFields()"})
+
+
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <p><input class="btn btn-primary btn-lg" type="submit" value="Search"/>
+                </p>
+            </div>
+
+
+        }
+    </div>
+</fieldset>
+
