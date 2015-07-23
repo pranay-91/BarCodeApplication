@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using BarCodeApplication.Models;
 
 namespace BarCodeApplication.DAL
 {
@@ -6,7 +8,13 @@ namespace BarCodeApplication.DAL
     {
         protected override void Seed(BarCodeContext context)
         {
+            var j = new Job { TravellerId = "1004", Status = "Start", Start = new DateTime(1981, 12, 09), End = new DateTime(1983, 1, 20) };
+            context.Job.Add(j);
+            context.SaveChanges();
             base.Seed(context);
+            
+         
         }
+
     }
 }

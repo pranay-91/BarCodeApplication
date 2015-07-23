@@ -8,7 +8,10 @@ namespace BarCodeApplication.DAL
         public BarCodeContext() : base("name=BarCodeDatabase")
         {
 
-            Database.SetInitializer<BarCodeContext>(new BarCodeInitializer());
+            //Database.SetInitializer<BarCodeContext>(new BarCodeInitializer());
+            
+            //Turn off DbInitilizer in code first for production environment
+            Database.SetInitializer<BarCodeContext>(null);
         }
 
         public DbSet<Import> Import { get; set; }

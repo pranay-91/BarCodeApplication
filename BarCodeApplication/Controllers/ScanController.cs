@@ -14,25 +14,24 @@ namespace BarCodeApplication.Controllers
         
         public ActionResult Index()
         {
-            using (var ctx = new BarCodeContext())
-            {
-
-                Job j = new Job{TravellerId="1001", Status = "Started", Start = new DateTime(1991,12,09), End = new DateTime(1993,1,20)};
-                ctx.Job.Add(j);
-                ctx.SaveChanges();
-
-            }
+           
             return View();
         }
 
         [HttpPost]
         public ActionResult Index(Scan scan)
         {
-            using (var ctx = new BarCodeContext())
-            {
 
-            }
-            return View("Scan",scan);
+            var ctx = new BarCodeContext();
+
+            //var result = ctx.Job.First(a => a.TravellerId == scan.BarCode);
+            var result = ctx.Import.First(a => a.JobNo == scan.BarCode);
+
+            return View("Scan", (Import)result);
+            
+       
+
+           
         }
     }
 }
