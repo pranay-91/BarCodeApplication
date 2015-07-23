@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\ImportController.cs" />
     <Compile Include="Controllers\ScanController.cs" />
     <Compile Include="DAL\BarCodeContext.cs" />
     <Compile Include="DAL\BarCodeInitializer.cs" />
@@ -145,11 +146,17 @@
     <Compile Include="Migrations\201507210314081_ChangeJobImportModel.Designer.cs">
       <DependentUpon>201507210314081_ChangeJobImportModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201507231238389_dropTravellerIdonJob.cs" />
+    <Compile Include="Migrations\201507231238389_dropTravellerIdonJob.Designer.cs">
+      <DependentUpon>201507231238389_dropTravellerIdonJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Import.cs" />
     <Compile Include="Models\Job.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ImportSettings.cs" />
     <Compile Include="ViewModels\Scan.cs" />
+    <Compile Include="ViewModels\StartPieceViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -182,9 +189,14 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Scan\Scan.cshtml" />
+    <Content Include="Views\Import\Index.cshtml" />
+    <Content Include="Views\Scan\JobFinish.cshtml" />
+    <Content Include="Views\Scan\StartPiece.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\UploadedFolder\" />
+    <Folder Include="Views\ImportJob\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -210,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201507210314081_ChangeJobImportModel.resx">
       <DependentUpon>201507210314081_ChangeJobImportModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507231238389_dropTravellerIdonJob.resx">
+      <DependentUpon>201507231238389_dropTravellerIdonJob.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,4 +1,4 @@
-﻿@model BarCodeApplication.ViewModels.Scan
+﻿@model BarCodeApplication.ViewModels.StartPieceViewModel
 
 @{
     ViewBag.Title = "Scan barcode";
@@ -20,7 +20,7 @@
                 <div class="editor-field focus">
 
 
-                    @Html.TextBoxFor(model => model.BarCode, new {@id = "txtBarCode", autofocus = "autofocus", onfocus = "clearFields()"})
+                    @Html.TextBoxFor(model => model.PieceNo, new {@id = "txtBarCode", autofocus = "autofocus", onfocus = "clearFields()"})
 
 
                 </div>

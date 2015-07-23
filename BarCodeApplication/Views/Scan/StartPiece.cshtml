@@ -1,8 +1,7 @@
-﻿
-@model BarCodeApplication.Models.Import
+﻿@model BarCodeApplication.ViewModels.StartPieceViewModel
 
 @{
-    ViewBag.Title = "Scan";
+    ViewBag.Title = "Start";
 }
 
 <table class="table">
@@ -23,7 +22,7 @@
         <td>@Html.DisplayFor(model => model.Project)</td>
     </tr>
 
-    
+
 
 </table>
 <fieldset>
@@ -31,15 +30,15 @@
         <div class="col-md-2 col-md-offset-2">
             <h4>scan the barcode</h4>
         </div>
-        @using (Html.BeginForm("FinishJob", "FinishJob", FormMethod.Post))
+        @using (Html.BeginForm())
         {
 
             <div class="col-md-4">
                 <p>
                     <div class="editor-field focus">
 
+                        @Html.TextBoxFor(model => model.FinishPiece, new { @id = "txtFinishPiece", autofocus = "autofocus", onfocus = "clearFields()" })
 
-                       <input type="text"/>
 
                     </div>
 

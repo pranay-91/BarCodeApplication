@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Import Jobs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Import Jobs</h2>
+
+@using (Html.BeginForm("Index", "import", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table>
+        <tr><td>Please select your import file.</td></tr>
+        <tr><td><input type="file" id="FileUpload" name="FileUpload" /></td></tr>
+        
+        <tr><td><input class="btn btn-primary btn-lg" type="Submit" value="Submit" /></td></tr>
+
+    </table>
+}

@@ -20,6 +20,7 @@ namespace BarCodeApplication
             );*/
         
             routes.MapRoute("Scan","scan", new {controller="Scan", action="Index"});
+            routes.MapRoute("Import", "import", new {controller = "Import", action = "Index"});
 
         }
 

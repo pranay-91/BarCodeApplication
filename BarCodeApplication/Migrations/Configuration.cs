@@ -34,7 +34,7 @@ namespace BarCodeApplication.Migrations
                 new Job()
                 {
                     Id = 1,
-                    TravellerId = "1001",
+
                     Status = "started",
                     Start = new DateTime(1988, 09, 09),
                     End = new DateTime(1988, 09, 29)
@@ -42,7 +42,6 @@ namespace BarCodeApplication.Migrations
                 new Job()
                 {
                     Id = 2,
-                    TravellerId = "1002",
                     Status = "started",
                     Start = new DateTime(1998, 09, 09),
                     End = new DateTime(1998, 09, 29)
@@ -50,7 +49,6 @@ namespace BarCodeApplication.Migrations
                 new Job()
                 {
                     Id = 3,
-                    TravellerId = "1003",
                     Status = "started",
                     Start = new DateTime(2008, 09, 09),
                     End = new DateTime(2008, 09, 29)

@@ -1,0 +1,29 @@
+﻿@model BarCodeApplication.ViewModels.StartPieceViewModel
+
+@{
+    ViewBag.Title = "Scan";
+}
+
+<table class="table">
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.CompanyName)</td>
+        <td>@Html.DisplayFor(model => model.CompanyName)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.JobNo)</td>
+        <td>@Html.DisplayFor(model => model.JobNo)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Description)</td>
+        <td>@Html.DisplayFor(model => model.Description)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Project)</td>
+        <td>@Html.DisplayFor(model => model.Project)</td>
+    </tr>
+    <tr>
+        <td>
+            <h3>@Model.PieceNo has been finished.</h3>
+        </td>
+    </tr>
+</table>

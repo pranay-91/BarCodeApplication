@@ -1,0 +1,4 @@
+﻿--Things to do
+#scan controller should handle both finish and start
+#Action Result should just call functions for various scenatrios such as newJob, existingJob, finishJob
+#Extended features involves checking whether the scanned item is a finished job
